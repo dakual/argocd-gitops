@@ -34,6 +34,9 @@ minikube -p gitops service argocd-server -n argocd --url -p gitops
 Apply the Application
 ```
 kubectl apply -f app.yaml
+
+# Verify the the rollout is complete:
+kubectl rollout status deploy/app -n app-dev
 ```
 
 

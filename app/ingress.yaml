@@ -4,7 +4,7 @@ metadata:
   name: app
 spec:
   rules:
-    - host: app.example.com
+    - host: app.argocd.com
       http:
         paths:
           - path: /
