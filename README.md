@@ -31,8 +31,10 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 minikube -p gitops service argocd-server -n argocd --url -p gitops
 ```
 
+Apply the Application
+```
 kubectl apply -f app.yaml
-
+```
 
 
 
