@@ -39,7 +39,8 @@ kubectl apply -f app.yaml
 kubectl rollout status deploy/app -n app-dev
 ```
 
-
-
-
+Update manifest by manually for "Out of Sync" issue
+```
+kubectl -n app-dev patch deploy/app --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/env/0/value", "value":"green"}]'
+```
 
